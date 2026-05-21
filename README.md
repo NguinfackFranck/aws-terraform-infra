@@ -10,21 +10,8 @@ This project designs and deploys a complete AWS infrastructure for hosting a sta
 GoalImplementationHigh AvailabilityMulti-AZ deployment with Auto Scaling GroupsLow LatencyAmazon CloudFront CDN at global edge locationsSecurityPrivate subnets, Security Groups, IAM rolesAutomationFully automated via Terraform modules
 
 🏗️ Architecture Overview
-Internet
-    │
-    ▼
-[Amazon CloudFront CDN]  ←──  [Route 53 DNS (latency-based routing)]
-    │
-    ▼
-[Application Load Balancer – Public Subnet A / B]
-    │          │
-    ▼          ▼
-[EC2 Auto Scaling Group – Private Subnet]
-    │
-    ▼
-[NAT Gateway]  →  Internet (outbound only)
-    │
-[CloudWatch Monitoring + Auto Scaling Policies]
+<img width="1002" height="492" alt="image" src="https://github.com/user-attachments/assets/ae15be2b-6c50-4183-9da7-408df8e20804" />
+
 
 🔧 AWS Services Used
 
@@ -38,7 +25,14 @@ IAM Roles & Policies – Least-privilege access control across all resources
 
 
 🌐 Networking Setup
-ComponentCIDR / DetailsVPC10.0.0.0/16Public Subnet A10.0.1.0/24 (us-east-2a)Public Subnet B10.0.3.0/24 (us-east-2b)Private Subnet10.0.2.0/24 (us-east-2a)Internet GatewayAttached to VPC for ALB public accessNAT GatewayPrivate subnet outbound access
+
+Component	         CIDR / Details
+VPC	                10.0.0.0/16
+Public Subnet A	    10.0.1.0/24 (us-east-2a)
+Public Subnet B	    10.0.3.0/24 (us-east-2b)
+Private Subnet	    10.0.2.0/24 (us-east-2a)
+Internet Gateway    Attached to VPC for ALB public access
+NAT Gateway	Private   subnet outbound access
 
 🔒 Security Design
 
