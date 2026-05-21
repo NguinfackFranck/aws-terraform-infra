@@ -10,7 +10,8 @@ This project designs and deploys a complete AWS infrastructure for hosting a sta
 GoalImplementationHigh AvailabilityMulti-AZ deployment with Auto Scaling GroupsLow LatencyAmazon CloudFront CDN at global edge locationsSecurityPrivate subnets, Security Groups, IAM rolesAutomationFully automated via Terraform modules
 
 🏗️ Architecture Overview
-<img width="1002" height="492" alt="image" src="https://github.com/user-attachments/assets/ae15be2b-6c50-4183-9da7-408df8e20804" />
+<img width="980" height="714" alt="image" src="https://github.com/user-attachments/assets/f869d7ea-29f2-4a90-8dda-3d31ee592237" />
+
 
 
 🔧 AWS Services Used
