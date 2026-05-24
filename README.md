@@ -33,13 +33,18 @@ IAM Roles & Policies – Least-privilege access control across all resources
 
 🌐 Networking Setup
 
-Component	         CIDR / Details
+Component	            CIDR / Details
 
-VPC	                10.0.0.0/16
-Public Subnet A	    10.0.1.0/24 (us-east-2a)
-Public Subnet B	    10.0.3.0/24 (us-east-2b)
-Private Subnet	    10.0.2.0/24 (us-east-2a)
-Internet Gateway    Attached to VPC for ALB public access
+VPC	                  10.0.0.0/16
+
+Public Subnet A	      10.0.1.0/24 (us-east-2a)
+
+Public Subnet B	      10.0.3.0/24 (us-east-2b)
+
+Private Subnet	      10.0.2.0/24 (us-east-2a)
+
+Internet Gateway      Attached to VPC for ALB public access
+
 NAT Gateway	Private   subnet outbound access
 
 🔒 Security Design
