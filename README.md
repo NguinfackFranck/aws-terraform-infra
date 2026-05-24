@@ -17,11 +17,17 @@ GoalImplementationHigh AvailabilityMulti-AZ deployment with Auto Scaling GroupsL
 🔧 AWS Services Used
 
 Amazon EC2 – Compute instances in private subnets within an Auto Scaling Group
+
 Application Load Balancer (ALB) – Distributes traffic across AZs from public subnets
+
 Amazon CloudFront – Global CDN caching content at edge locations worldwide
+
 Amazon Route 53 – DNS with latency-based routing and Alias records to CloudFront
+
 NAT Gateway – Secure outbound internet access for private EC2 instances
+
 Amazon CloudWatch – Metrics, alarms, and auto-scaling triggers
+
 IAM Roles & Policies – Least-privilege access control across all resources
 
 
